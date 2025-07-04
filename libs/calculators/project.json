@@ -1,0 +1,19 @@
+{
+  "name": "calculators",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/calculators/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/calculators",
+        "main": "libs/calculators/src/index.ts",
+        "tsConfig": "libs/calculators/tsconfig.lib.json",
+        "assets": ["libs/calculators/*.md"]
+      }
+    }
+  }
+}
