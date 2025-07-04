@@ -32,7 +32,7 @@ describe("Term Deposit Calculator", () => {
             principal: 100000,
             interestRate: 0.01,
             investmentTerm: 17,
-            interestPaidType: InterestPaidType.anuualy,
+            interestPaidType: InterestPaidType.annually,
         };
 
         const result = termDepositCalculator(props);
@@ -42,9 +42,9 @@ describe("Term Deposit Calculator", () => {
 
     it("should calculate total amount and interest earned for interest payment 'at maturity'", () => {
         const props = {
-            principal: 100000,
-            interestRate: 0.01,
-            investmentTerm: 17,
+            principal: 1000,
+            interestRate: 0.0125,
+            investmentTerm: 12,
             interestPaidType: InterestPaidType["at maturity"],
         };
 

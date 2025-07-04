@@ -3,7 +3,7 @@ import { roundUp } from "./helpers";
 export enum InterestPaidType {
     "monthly",
     "quarterly",
-    "anuualy",
+    "annually",
     "at maturity",
 }
 /* * Term Deposit Properties
@@ -24,14 +24,13 @@ export interface TermDepositProperties {
 const mapInteresPaidToMonths = new Map<InterestPaidType, number>([
     [InterestPaidType.monthly, 12],
     [InterestPaidType.quarterly, 4],
-    [InterestPaidType.anuualy, 1],
+    [InterestPaidType.annually, 1],
     [InterestPaidType["at maturity"], 1],
 ]);
 /*
  * Term Deposit Calculator
  * This function calculates the total amount and interest earned on a term deposit.
- *
- * @param {TermDepositProperties} props - The properties of the term deposit.
+ * @param @typedef{TermDepositProperties} props - The properties of the term deposit.
  * @returns {Object} An object containing the total amount and total interest earned.
  */
 
