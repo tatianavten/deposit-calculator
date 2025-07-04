@@ -4,9 +4,13 @@
         "outDir": "dist",
         "tsBuildInfoFile": "dist/tsconfig.app.tsbuildinfo",
         "jsx": "react-jsx",
-        "lib": ["dom"],
-        "types": ["node", "@nx/react/typings/cssmodule.d.ts", "@nx/react/typings/image.d.ts"]
+        "lib": ["dom", "es6", "dom.iterable"],
+        "types": ["node"]
     },
+    "files": [
+        "../../node_modules/@nx/react/typings/cssmodule.d.ts",
+        "../../node_modules/@nx/react/typings/image.d.ts"
+    ],
     "exclude": [
         "out-tsc",
         "dist",

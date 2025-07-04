@@ -3,9 +3,20 @@ import { InterestPaidType, termDepositCalculator } from "@deposit-calculator/cal
 import { useMemo } from "react";
 import "./Calculator.css";
 import { Results } from "../Results/Results";
-import Title from "antd/es/typography/Title";
 
-export const Calculator = () => {
+export interface TermDepositProperties {
+    initialPrincipal?: number;
+    initialInterestRate?: number; // in percentage
+    initialInvestmentTerm?: number; // in months
+    initialInterestPaidType?: InterestPaidType;
+}
+
+export const Calculator = ({
+    initialPrincipal = 100000,
+    initialInterestRate = 1,
+    initialInvestmentTerm = 12,
+    initialInterestPaidType = InterestPaidType.monthly,
+}: TermDepositProperties) => {
     const { useForm, useWatch } = Form;
     const [form] = useForm();
     const principal = useWatch("principal", form);
@@ -22,7 +33,6 @@ export const Calculator = () => {
         ) {
             return null;
         }
-
         return termDepositCalculator({
             principal,
             interestRate: interestRate / 100,
@@ -33,9 +43,9 @@ export const Calculator = () => {
 
     return (
         <div className="calculator-wrapper">
-            <Title className="calculator-title" level={2}>
+            <Typography.Title className="calculator-title" level={2}>
                 Term Deposit Calculator
-            </Title>
+            </Typography.Title>
             <p className="calculator-description">
                 This calculator helps you to calculate the total amount and interest earned on a
                 term deposit.
@@ -45,10 +55,10 @@ export const Calculator = () => {
                 layout="horizontal"
                 form={form}
                 initialValues={{
-                    principal: 100000,
-                    interestRate: 1,
-                    investmentTerm: 12,
-                    interestPaidType: InterestPaidType.monthly,
+                    principal: initialPrincipal,
+                    interestRate: initialInterestRate,
+                    investmentTerm: initialInvestmentTerm,
+                    interestPaidType: initialInterestPaidType,
                 }}>
                 <Form.Item label="Principal" name="principal">
                     <InputNumber<number>
@@ -81,10 +91,12 @@ export const Calculator = () => {
                 </Form.Item>
             </Form>
             <div className="calculator-result">
-                <Results
-                    totalAmount={calculatonResults?.totalAmount ?? 0}
-                    totalInterest={calculatonResults?.totalInterest ?? 0}
-                />
+                {calculatonResults && (
+                    <Results
+                        totalAmount={calculatonResults?.totalAmount}
+                        totalInterest={calculatonResults?.totalInterest}
+                    />
+                )}
             </div>
         </div>
     );

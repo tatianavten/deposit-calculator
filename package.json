@@ -6,6 +6,8 @@
   "private": true,
   "dependencies": {
     "antd": "^5.26.3",
+    "jest-axe": "^10.0.0",
+    "jest-css-modules": "^2.1.0",
     "postcss": "^8.5.6",
     "postcss-nested": "^7.0.2",
     "postcss-preset-env": "^10.2.4",
@@ -34,7 +36,9 @@
     "@swc/helpers": "~0.5.11",
     "@swc/jest": "~0.2.36",
     "@testing-library/dom": "10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "16.1.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.0.0",
     "@types/react": "19.0.0",

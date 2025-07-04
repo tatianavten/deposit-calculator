@@ -2,13 +2,10 @@
     "extends": "../../tsconfig.base.json",
     "compilerOptions": {
         "outDir": "./out-tsc/jest",
-        "jsx": "react-jsx",
-        "types": [
-            "jest",
-            "node",
-            "@nx/react/typings/cssmodule.d.ts",
-            "@nx/react/typings/image.d.ts"
-        ]
+        "module": "es2020",
+        "moduleResolution": "bundler",
+        "types": ["jest", "node", "@testing-library/jest-dom"],
+        "jsx": "react-jsx"
     },
     "include": [
         "jest.config.ts",
@@ -21,5 +18,9 @@
         "src/**/*.test.jsx",
         "src/**/*.spec.jsx",
         "src/**/*.d.ts"
+    ],
+    "files": [
+        "../../node_modules/@nx/react/typings/cssmodule.d.ts",
+        "../../node_modules/@nx/react/typings/image.d.ts"
     ]
 }
