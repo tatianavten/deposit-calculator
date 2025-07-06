@@ -1,19 +1,25 @@
 {
   "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "types": ["node"]
+  },
   "compileOnSave": false,
   "files": [],
   "references": [
     {
-      "path": "./apps/deposit-calculator-e2e"
-    },
-    {
-      "path": "./apps/deposit-calculator"
-    },
-    {
       "path": "./libs/calculations"
     },
     {
-      "path": "./libs/calculations"
+      "path": "./apps/deposit-calculator-ui-e2e"
+    },
+    {
+      "path": "./apps/deposit-calculator-ui"
     }
   ]
 }

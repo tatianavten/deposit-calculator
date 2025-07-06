@@ -25,4 +25,23 @@ describe('App', () => {
       ).length > 0
     ).toBeTruthy();
   });
+
+  it('should render the header', () => {
+    const { getByText } = render(
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    );
+    expect(getByText('Deposit Calculator')).toBeTruthy();
+  });
+
+  it('should pass a11y checks', async () => {
+    const { container } = render(
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    );
+    const results = await import('jest-axe').then(({ axe }) => axe(container));
+    expect(results).toHaveNoViolations();
+  });
 });
