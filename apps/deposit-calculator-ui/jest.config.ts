@@ -1,5 +1,5 @@
 export default {
-  displayName: '@deposit-calculator/deposit-calculator',
+  displayName: 'deposit-calculator-ui',
   preset: '../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',

@@ -4,7 +4,8 @@
   "private": true,
   "nx": {
     "implicitDependencies": [
-      "@deposit-calculator/deposit-calculator"
-    ]
+      "deposit-calculator-ui"
+    ],
+    "name": "deposit-calculator-ui-e2e"
   }
 }
