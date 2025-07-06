@@ -1,0 +1,10 @@
+{
+  "name": "@deposit-calculator/deposit-calculator-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@deposit-calculator/deposit-calculator"
+    ]
+  }
+}
