@@ -3,8 +3,7 @@
   "compilerOptions": {
     "outDir": "./out-tsc/jest",
     "types": ["jest", "node"],
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
+    "module": "commonjs",
     "forceConsistentCasingInFileNames": true
   },
   "include": [
