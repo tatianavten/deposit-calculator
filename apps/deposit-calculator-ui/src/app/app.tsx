@@ -1,13 +1,8 @@
-import { calculations } from '@deposit-calculator/calculations';
+import { CalculatorFields } from './components/CalculatorFields';
+import './app.css';
 
 export function App() {
-  return (
-    <main>
-      <h1>Deposit Calculator</h1>
-      <p>Calculator to be added soon</p>
-      <p>{calculations()}</p>
-    </main>
-  );
+  return <CalculatorFields />;
 }
 
 export default App;

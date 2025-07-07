@@ -28,12 +28,12 @@ describe('Term Deposit Calculator', () => {
     expect(result.totalInterest).toEqual(1425);
   });
 
-  it('should calculate total amount and interest earned for annualy interest payment', () => {
+  it('should calculate total amount and interest earned for ANNUALLY interest payment', () => {
     const props = {
       principal: 100000,
       interestRate: 0.01,
       investmentTerm: 17,
-      interestPaidType: InterestPaidType.ANNUALY,
+      interestPaidType: InterestPaidType.ANNUALLY,
     };
 
     const result = termDepositCalculator(props);

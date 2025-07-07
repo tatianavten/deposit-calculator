@@ -26,7 +26,7 @@ export default defineConfig({
   webServer: {
     command: 'npx nx run deposit-calculator-ui:serve',
     url: 'http://localhost:4200',
-    reuseExistingServer: true,
+    reuseExistingServer: false,
     cwd: workspaceRoot,
   },
   projects: [

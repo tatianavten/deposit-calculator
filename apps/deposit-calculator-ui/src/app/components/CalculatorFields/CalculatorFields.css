@@ -1,0 +1,30 @@
+.calculator-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.calculator-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.calculator-form {
+  margin-top: 20px;
+}
+
+.calculator-result {
+  background-color: #f6f2f5;
+  max-width: 400px;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.calculator-note {
+  display: block;
+  margin-top: 30px;
+  font-size: 0.8rem;
+}

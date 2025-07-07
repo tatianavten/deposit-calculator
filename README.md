@@ -17,7 +17,7 @@ npx nx serve deposit-calculator-ui
 To run unit tests:
 
 ```sh
-npx nx run @deposit-calculator/deposit-calculator-ui:test
+npx nx run deposit-calculator-ui:test
 ```
 
 To create a production bundle:
@@ -41,11 +41,15 @@ These targets are either [inferred automatically](https://nx.dev/concepts/inferr
 Currently there is only basic set-up done for the e2e, you can run it by:
 
 ```sh
-npx nx run @deposit-calculator/deposit-calculator-ui-e2e:e2e
+npx nx run deposit-calculator-ui-e2e:e2e
 ```
 
 ## Calculations library
 
 The calculations library has the calculation method and helpes.
 
-Please refer to [Calculations library README ](libs/calculators/README.md) for building or running tests commands on the calculation method.
+Please refer to [Calculations library README ](libs/calculations/README.md) for building or running tests commands on the calculation method.
+
+# Credits
+
+<a href="https://www.flaticon.com/free-icons/calculator" title="calculator icons">Calculator favicon created by Freepik - Flaticon</a>

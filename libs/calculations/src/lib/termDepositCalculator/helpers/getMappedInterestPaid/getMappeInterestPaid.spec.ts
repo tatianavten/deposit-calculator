@@ -13,7 +13,7 @@ describe('getMappedInterestPaid', () => {
   });
 
   it('should return 1 for annual interest payment', () => {
-    expect(getMappedInterestPaid(InterestPaidType.ANNUALY)).toBe(1);
+    expect(getMappedInterestPaid(InterestPaidType.ANNUALLY)).toBe(1);
   });
 
   it('should return 1 for at maturity interest payment', () => {
